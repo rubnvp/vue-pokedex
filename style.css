@@ -10,6 +10,10 @@
     outline: none;
 }
 
+.material-icons {
+    font-size: 20px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -155,6 +159,8 @@ header, article, nav, aside {
 /* Nice checkbox */
 .md-checkbox {
   position: relative;
+  display: flex;
+  align-items: center;
   margin: 16px 0;
   text-align: left;
 }
@@ -162,6 +168,8 @@ header, article, nav, aside {
   display: inline-block;
 }
 .md-checkbox label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   text-transform: capitalize;
 }

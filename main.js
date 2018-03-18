@@ -36,6 +36,14 @@ var app = new Vue({
         getPokemonTypeColor: function(type) {
             return pokemonTypeColor[type];
         },
+        getPokemonCount: function(type) {
+            var that = this;
+            return this.filteredPokemons
+                .filter(function(pokemon){ // filter by type
+                    return pokemon.types.includes(type);
+                })
+                .length;
+        },
         removePokemon: function(pokemonToRemove) {
             this.pokemons = this.pokemons
                 .filter(function(pokemon){
