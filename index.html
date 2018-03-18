@@ -44,7 +44,7 @@
             <!-- Pokemon Card -->
             <div class="pokemon-card" v-for="pokemon in pokemons" :key="pokemon.name">
                 <div class="background-wrapper">
-                    <div :style="'background-color: ' + getPokemonTypeColor(pokemon.types[0])"></div>
+                    <div v-for="type in pokemon.types" :key="type" :style="{'background-color': getPokemonTypeColor(type)}"></div>
                 </div>
                 <span class="remove-pokemon"><i class="material-icons">close</i></span>
                 <div class="image-wrapper">
