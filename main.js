@@ -1,5 +1,5 @@
 (function(){
-var pokemonTypeToColor = {
+var pokemonTypeColor = {
     "normal": "#A8A878",
     "fire": "#F08030",
     "fighting": "#C03028",
@@ -24,34 +24,21 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'ola k ase?',
-        pokemon: {
-            "id":4,
-            "name":"charmander",
-            "image":"images/pokemons/charmander.png",
-            "types":[
-                "fire"
-            ],
-            "abilities":[
-                "solar-power",
-                "blaze"
-            ],
-            "experience":62,
-            "height":6,
-            "weight":85
-        },
+        pokemons: [],
     },
     methods: {
         getPokemonTypeColor: function(type) {
-            return pokemonTypeToColor[type];
+            return pokemonTypeColor[type];
         },
     },
     created: function() {
+        var that = this;
         fetch('data/pokemons.json')
             .then(function(response){
                 return response.json();
             })
-            .then(function(data){
-                console.log(data);
+            .then(function(pokemons){
+                that.pokemons = pokemons;
             });
     },
 });
