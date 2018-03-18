@@ -31,18 +31,21 @@ var app = new Vue({
                         pokemon.types[1] && that.selectedPokemonTypes.includes(pokemon.types[1]);
                 });
         },
+        pokemonCountByType: function() {
+            var pokemonCountByType = {};
+            for (type in pokemonTypeColor) {
+                pokemonCountByType[type] = this.filteredPokemons
+                    .filter(function(pokemon){ // filter by type
+                        return pokemon.types.includes(type);
+                    })
+                    .length;
+            }
+            return pokemonCountByType;
+        }
     },
     methods: {
         getPokemonTypeColor: function(type) {
             return pokemonTypeColor[type];
-        },
-        getPokemonCount: function(type) {
-            var that = this;
-            return this.filteredPokemons
-                .filter(function(pokemon){ // filter by type
-                    return pokemon.types.includes(type);
-                })
-                .length;
         },
         removePokemon: function(pokemonToRemove) {
             this.pokemons = this.pokemons

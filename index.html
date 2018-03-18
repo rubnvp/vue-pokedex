@@ -29,8 +29,11 @@
                 <div class="md-checkbox" v-for="(color, type) in pokemonTypes" :key="type">
                     <input :id="'checkbox-'+type" type="checkbox" :value="type" v-model="selectedPokemonTypes">
                     <label :for="'checkbox-'+type">
-                        <i class="material-icons" :style="{'margin-right': '5px', color: color}">lens</i>
-                        {{ type }} ({{ getPokemonCount(type) }})
+                        <i class="material-icons" :style="{color: color}">lens</i>
+                        <span class="label-title">{{ type }}</span>
+                        <span v-if="pokemonCountByType[type]">
+                            ({{pokemonCountByType[type]}})
+                        </span>
                     </label>
                 </div>
             </div>
