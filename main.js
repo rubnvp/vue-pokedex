@@ -15,7 +15,7 @@ var app = new Vue({
     data: {
         searchboxText: '',
         selectedPokemonTypes: [],
-        pokemonTypes: Object.keys(pokemonTypeColor),
+        pokemonTypes: Object.assign({}, pokemonTypeColor),
         pokemons: [],
     },
     computed: {

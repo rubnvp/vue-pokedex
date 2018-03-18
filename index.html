@@ -26,10 +26,10 @@
             <!-- Checkboxes -->
             <p class="checkboxes-list-title">Type</p>
             <div class="checkboxes-list">
-                <div class="md-checkbox" v-for="(type, index) in pokemonTypes" :key="type">
-                    <input :id="'checkbox-'+index" type="checkbox" :value="type" v-model="selectedPokemonTypes">
-                    <label :for="'checkbox-'+index">
-                        <i class="material-icons" :style="{'margin-right': '5px', color: getPokemonTypeColor(type)}">lens</i>
+                <div class="md-checkbox" v-for="(color, type) in pokemonTypes" :key="type">
+                    <input :id="'checkbox-'+type" type="checkbox" :value="type" v-model="selectedPokemonTypes">
+                    <label :for="'checkbox-'+type">
+                        <i class="material-icons" :style="{'margin-right': '5px', color: color}">lens</i>
                         {{ type }} ({{ getPokemonCount(type) }})
                     </label>
                 </div>
