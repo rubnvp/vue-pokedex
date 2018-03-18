@@ -18,10 +18,9 @@
     <div class="main-content" id="app" v-cloak>
         <!-- Pokemon Filters -->
         <aside class="pokedex-filters">
-            {{ message }}
             <!-- Searchbox -->
             <div class="nice-input-wrapper">
-                <input class="nice-input" type="text" placeholder="Searchbox">
+                <input class="nice-input" type="text" placeholder="Searchbox" v-model="searchboxText">
                 <span class="focus-border"><i></i></span>
             </div>
             <!-- Checkboxes -->

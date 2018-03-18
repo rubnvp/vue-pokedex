@@ -23,7 +23,7 @@ var pokemonTypeColor = {
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'ola k ase?',
+        searchboxText: 'charm',
         pokemons: [],
     },
     methods: {
