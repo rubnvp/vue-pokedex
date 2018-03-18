@@ -22,8 +22,13 @@ var app = new Vue({
         filteredPokemons: function() {
             var that = this;
             return this.pokemons
-                .filter(function(pokemon){
+                .filter(function(pokemon){ // filter by name
                     return pokemon.name.includes(that.searchboxText);
+                })
+                .filter(function(pokemon){ // filter by type
+                    if (!that.selectedPokemonTypes.length) return true;
+                    return that.selectedPokemonTypes.includes(pokemon.types[0]) ||
+                        pokemon.types[1] && that.selectedPokemonTypes.includes(pokemon.types[1]);
                 });
         },
     },

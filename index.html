@@ -24,10 +24,12 @@
                 <span class="focus-border"><i></i></span>
             </div>
             <!-- Checkboxes -->
-            <p>Type</p>
-            <div class="md-checkbox" v-for="(type, index) in pokemonTypes" :key="type">
-                <input :id="'checkbox-'+index" type="checkbox" checked>
-                <label :for="'checkbox-'+index">{{ type }}</label>
+            <p class="checkboxes-list-title">Type</p>
+            <div class="checkboxes-list">
+                <div class="md-checkbox" v-for="(type, index) in pokemonTypes" :key="type">
+                    <input :id="'checkbox-'+index" type="checkbox" :value="type" v-model="selectedPokemonTypes">
+                    <label :for="'checkbox-'+index">{{ type }}</label>
+                </div>
             </div>
         </aside>
 
