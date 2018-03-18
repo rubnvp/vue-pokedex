@@ -41,7 +41,7 @@
         <!-- Pokemons list -->
         <article class="pokemons-list">
             <!-- Pokemon Card -->
-            <div class="pokemon-card" v-for="pokemon in pokemons" :key="pokemon.name">
+            <div class="pokemon-card" v-for="pokemon in filteredPokemons" :key="pokemon.name">
                 <div class="background-wrapper">
                     <div v-for="type in pokemon.types" :key="type" :style="{'background-color': getPokemonTypeColor(type)}"></div>
                 </div>

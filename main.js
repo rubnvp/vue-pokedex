@@ -23,8 +23,17 @@ var pokemonTypeColor = {
 var app = new Vue({
     el: '#app',
     data: {
-        searchboxText: 'charm',
+        searchboxText: '',
         pokemons: [],
+    },
+    computed: {
+        filteredPokemons: function() {
+            var that = this;
+            return this.pokemons
+                .filter(function(pokemon){
+                    return pokemon.name.includes(that.searchboxText);
+                });
+        },
     },
     methods: {
         getPokemonTypeColor: function(type) {
