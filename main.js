@@ -44,7 +44,16 @@ var app = new Vue({
         getPokemonTypeColor: function(type) {
             return pokemonTypeToColor[type];
         },
-    }
+    },
+    created: function() {
+        fetch('data/pokemons.json')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                console.log(data);
+            });
+    },
 });
 
 window.app = app;
