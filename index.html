@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <title>Minimal Vue</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        Vue - Pokedex
+    </header>
+    <div class="main-content">
+        <!-- Pokemon Filters -->
+        <aside class="pokedex-filters">
+            <!-- Searchbox -->
+            <div class="nice-input-wrapper">
+                <input class="nice-input" type="text" placeholder="Searchbox">
+                <span class="focus-border"><i></i></span>
+            </div>
+            <!-- Checkboxes -->
+            <div class="md-checkbox">
+                <input id="checkbox-1" type="checkbox" checked>
+                <label for="checkbox-1">Checkbox 1</label>
+            </div>
+            <div class="md-checkbox">
+                <input id="checkbox-2" type="checkbox">
+                <label for="checkbox-2">Checkbox 2</label>
+            </div>
+            <div class="md-checkbox">
+                <input id="checkbox-3" type="checkbox">
+                <label for="checkbox-3">Checkbox 3</label>
+            </div>
+        </aside>
+
+        <!-- Pokemons list -->
+        <article class="pokemons-list">
+            <!-- Pokemon Card -->
+            <div class="pokemon-card">
+                <div class="background-wrapper">
+                    <div style="background-color: rgb(120, 200, 80);"></div>
+                    <div style="background-color: rgb(160, 64, 160);"></div>
+                </div>
+                <span class="remove-pokemon"><i class="material-icons">close</i></span>
+                <div class="image-wrapper">
+                    <img class="pokemon-image" src="/images/pokemons/Bulbasaur.png" alt="bulbasaur">
+                </div>
+                <div class="pokemon-title">
+                    Bulbasaur
+                </div>
+            </div>
+
+            <div class="pokemon-card">
+                <div class="background-wrapper">
+                    <div style="background-color: rgb(240, 128, 48);"></div>
+                </div>
+                <span class="remove-pokemon"><i class="material-icons">close</i></span>
+                <div class="image-wrapper">
+                    <img class="pokemon-image" src="/images/pokemons/Charmander.png" alt="charmander">
+                </div>
+                <div class="pokemon-title">
+                    Charmander
+                </div>
+            </div>
+
+            <div class="pokemon-card">
+                <div class="background-wrapper">
+                    <div style="background-color: rgb(104, 144, 240);"></div>
+                </div>
+                <span class="remove-pokemon"><i class="material-icons">close</i></span>
+                <div class="image-wrapper">
+                    <img class="pokemon-image" src="/images/pokemons/Squirtle.png" alt="squirtle">
+                </div>
+                <div class="pokemon-title">
+                    Squirtle
+                </div>
+            </div>
+
+        </article>
+    </div>
+</body>
+</html>
