@@ -151,6 +151,7 @@ header, article, nav, aside {
 }
 .md-checkbox label {
   cursor: pointer;
+  text-transform: capitalize;
 }
 .md-checkbox label:before, .md-checkbox label:after {
   content: "";

@@ -20,21 +20,14 @@
         <aside class="pokedex-filters">
             <!-- Searchbox -->
             <div class="nice-input-wrapper">
-                <input class="nice-input" type="text" placeholder="Searchbox" v-model="searchboxText">
+                <input class="nice-input" type="text" placeholder="Search by name" v-model="searchboxText">
                 <span class="focus-border"><i></i></span>
             </div>
             <!-- Checkboxes -->
-            <div class="md-checkbox">
-                <input id="checkbox-1" type="checkbox" checked>
-                <label for="checkbox-1">Checkbox 1</label>
-            </div>
-            <div class="md-checkbox">
-                <input id="checkbox-2" type="checkbox">
-                <label for="checkbox-2">Checkbox 2</label>
-            </div>
-            <div class="md-checkbox">
-                <input id="checkbox-3" type="checkbox">
-                <label for="checkbox-3">Checkbox 3</label>
+            <p>Type</p>
+            <div class="md-checkbox" v-for="(type, index) in pokemonTypes" :key="type">
+                <input :id="'checkbox-'+index" type="checkbox" checked>
+                <label :for="'checkbox-'+index">{{ type }}</label>
             </div>
         </aside>
 
