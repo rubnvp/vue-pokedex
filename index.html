@@ -19,44 +19,62 @@
         <!-- Pokemon Filters -->
         <aside class="pokedex-filters">
             <!-- Searchbox -->
-            <div class="nice-input-wrapper">
-                <input class="nice-input" type="text" placeholder="Search by name" v-model="searchboxText">
-                <span class="focus-border"><i></i></span>
-            </div>
+            <nice-input v-model="searchboxText"></nice-input>
             <!-- Checkboxes -->
             <p class="checkboxes-list-title">Type</p>
             <div class="checkboxes-list">
-                <div class="md-checkbox" v-for="(color, type) in pokemonTypes" :key="type">
-                    <input :id="'checkbox-'+type" type="checkbox" :value="type" v-model="selectedPokemonTypes">
-                    <label :for="'checkbox-'+type">
-                        <i class="material-icons" :style="{color: color}">lens</i>
-                        <span class="label-title">{{ type }}</span>
-                        <span v-if="pokemonCountByType[type]">
-                            ({{pokemonCountByType[type]}})
-                        </span>
-                    </label>
-                </div>
+                <nice-checkbox
+                    v-for="(color, type) in pokemonTypes" :key="type"
+                    v-model="selectedPokemonTypes"
+                    :color="color"
+                    :name="type"
+                    :count="pokemonCountByType[type]"
+                ></nice-checkbox>
             </div>
         </aside>
 
         <!-- Pokemons list -->
         <article class="pokemons-list">
             <!-- Pokemon Card -->
-            <div class="pokemon-card" v-for="pokemon in filteredPokemons" :key="pokemon.name">
-                <div class="background-wrapper">
-                    <div v-for="type in pokemon.types" :key="type" :style="{'background-color': getPokemonTypeColor(type)}"></div>
-                </div>
-                <span @click="removePokemon(pokemon)" class="remove-pokemon"><i class="material-icons">close</i></span>
-                <div class="image-wrapper">
-                    <img class="pokemon-image" :src="pokemon.image" alt="pokemon.name">
-                </div>
-                <div class="pokemon-title">
-                    {{ pokemon.name }}
-                </div>
-            </div>
-
+            <pokemon-card
+                v-for="pokemon in filteredPokemons" :key="pokemon.name"
+                :pokemon="pokemon"
+                :colors="getBackgroundColors(pokemon.types)"
+                @remove="removePokemon"
+            ></pokemon-card>
         </article>
     </div>
+
+    <!-- Nice checkbox template -->
+    <script type="text/x-template" id="nice-checkbox-template">
+        <div class="md-checkbox">
+            <input :id="'checkbox-'+name" type="checkbox" :value="name" v-model="selectedList">
+            <label :for="'checkbox-'+name">
+                <i class="material-icons" :style="{color: color}">lens</i>
+                <span class="label-title">{{ name }}</span>
+                <span v-if="count">
+                    ({{ count }})
+                </span>
+            </label>
+        </div>
+    </script>
+
+    <!-- Pokemon Card template -->
+    <script type="text/x-template" id="pokemon-card-template">
+        <div class="pokemon-card">
+            <div class="background-wrapper">
+                <div v-for="color in colors" :key="color" :style="{'background-color': color}"></div>
+            </div>
+            <span @click="remove" class="remove-pokemon"><i class="material-icons">close</i></span>
+            <div class="image-wrapper">
+                <img class="pokemon-image" :src="pokemon.image" alt="pokemon.name">
+            </div>
+            <div class="pokemon-title">
+                {{ pokemon.name }}
+            </div>
+        </div>
+    </script>
+
     <script src="https://unpkg.com/vue"></script>
     <script src="main.js"></script>
 </body>

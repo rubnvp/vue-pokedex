@@ -10,6 +10,46 @@ var pokemonTypeColor = {
     "electric": "#F8D030"
 };
 
+Vue.component('nice-input', {
+    template: `
+<div class="nice-input-wrapper">
+    <input class="nice-input" type="text" placeholder="Search by name" :value="value" @input="changeText">
+    <span class="focus-border"><i></i></span>
+</div>`,
+    props: ['value'],
+    methods: {
+        changeText: function(event){
+            this.$emit('input', event.target.value);
+        },
+    },
+});
+
+
+Vue.component('nice-checkbox', {
+    template: '#nice-checkbox-template',
+    props: ['value', 'color', 'name', 'count'],
+    computed: {
+        selectedList: {
+            get: function() {
+                return this.value;
+            },
+            set: function(value) {
+                this.$emit('input', value);
+            },
+        },
+    },
+});
+
+var PokemonCard = {
+    template: '#pokemon-card-template',
+    props: ['pokemon', 'colors'],
+    methods: {
+        remove: function() {
+            this.$emit('remove', this.pokemon);
+        },
+    },
+};
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -47,6 +87,12 @@ var app = new Vue({
         getPokemonTypeColor: function(type) {
             return pokemonTypeColor[type];
         },
+        getBackgroundColors: function(types) {
+            return types
+                .map(function(type){
+                    return pokemonTypeColor[type];
+                });
+        },
         removePokemon: function(pokemonToRemove) {
             this.pokemons = this.pokemons
                 .filter(function(pokemon){
@@ -63,6 +109,9 @@ var app = new Vue({
             .then(function(pokemons){
                 that.pokemons = pokemons;
             });
+    },
+    components: {
+        PokemonCard: PokemonCard,
     },
 });
 
