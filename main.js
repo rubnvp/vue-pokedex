@@ -14,8 +14,6 @@ var app = new Vue({
     el: '#app',
     data: {
         searchboxText: '',
-        selectedPokemonTypes: [],
-        pokemonTypes: Object.assign({}, pokemonTypeColor),
         pokemons: [],
     },
     computed: {
@@ -24,11 +22,6 @@ var app = new Vue({
             return this.pokemons
                 .filter(function(pokemon){ // filter by name
                     return pokemon.name.includes(that.searchboxText);
-                })
-                .filter(function(pokemon){ // filter by type
-                    if (!that.selectedPokemonTypes.length) return true;
-                    return that.selectedPokemonTypes.includes(pokemon.types[0]) ||
-                        pokemon.types[1] && that.selectedPokemonTypes.includes(pokemon.types[1]);
                 });
         },
     },
