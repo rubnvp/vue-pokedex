@@ -20,7 +20,7 @@
         <aside class="pokedex-filters">
             <!-- Searchbox -->
             <div class="nice-input-wrapper">
-                <input class="nice-input" type="text" placeholder="Search by name" v-model="searchboxText">
+                <input class="nice-input" type="text" placeholder="Search by name">
                 <span class="focus-border"><i></i></span>
             </div>
             <!-- Checkboxes -->
@@ -48,7 +48,7 @@
         <!-- Pokemons list -->
         <main class="pokemons-list">
             <!-- Pokemon Card -->
-            <div class="pokemon-card" v-for="pokemon in filteredPokemons" :key="pokemon.name">
+            <div class="pokemon-card" v-for="pokemon in pokemons" :key="pokemon.name">
                 <div class="background-wrapper">
                     <div v-for="type in pokemon.types" :key="type" :style="{'background-color': getPokemonTypeColor(type)}"></div>
                 </div>
