@@ -19,27 +19,22 @@
         <!-- Pokemon Filters -->
         <aside class="pokedex-filters">
             <!-- Searchbox -->
+            <!-- don't get scared, v-model is just syntactic sugar to simulate two-way data binding -->
+            <!-- more info about the Vue binding in https://vuejs.org/v2/guide/forms.html#Text -->
             <div class="nice-input-wrapper">
-                <input class="nice-input" type="text" placeholder="Search by name">
+                <input class="nice-input" type="text" placeholder="Search by name" v-model="searchText">
                 <span class="focus-border"><i></i></span>
             </div>
             <!-- Checkboxes -->
             <p class="checkboxes-list-title">Type</p>
             <div class="checkboxes-list">
                 <!-- nice-checkbox -->
-                <div class="md-checkbox">
-                    <input id="checkbox-1" type="checkbox">
-                    <label for="checkbox-1">
-                        <!-- <i class="material-icons">lens</i> -->
-                        <span class="label-title">Checkbox 1</span>
-                    </label>
-                </div>
-                <!-- nice-checkbox -->
-                <div class="md-checkbox">
-                    <input id="checkbox-2" type="checkbox">
-                    <label for="checkbox-2">
-                        <!-- <i class="material-icons">lens</i> -->
-                        <span class="label-title">Checkbox 2</span>
+                <!-- more info about the Vue binding in https://vuejs.org/v2/guide/forms.html#Checkbox -->
+                <div class="md-checkbox" v-for="(color, type) in TYPE_COLOR" :key="type">
+                    <input :id="'checkbox-'+type" type="checkbox" :value="type" v-model="selectedPokemonTypes">
+                    <label :for="'checkbox-'+type">
+                        <i class="material-icons" :style="{color: color}">lens</i>
+                        <span class="label-title">{{ type }}</span>
                     </label>
                 </div>
             </div>
@@ -49,47 +44,34 @@
         <main>
             <article class="pokemons-list">
                 <!-- Pokemon Card -->
-                <div class="pokemon-card">
-                    <div class="background-wrapper">
-                        <div style="background-color: #A040A0"></div>
-                        <div style="background-color: #78C850"></div>
-                    </div>
-                    <span class="remove-pokemon"><i class="material-icons">close</i></span>
-                    <div class="image-wrapper">
-                        <img class="pokemon-image" src="images/pokemons/bulbasaur.png" alt="bulbasaur">
-                    </div>
-                    <div class="pokemon-title">
-                        bulbasaur
-                    </div>
-                </div>
-                <!-- Pokemon Card -->
-                <div class="pokemon-card">
-                    <div class="background-wrapper">
-                        <div style="background-color: #F08030"></div>
-                    </div>
-                    <span class="remove-pokemon"><i class="material-icons">close</i></span>
-                    <div class="image-wrapper">
-                        <img class="pokemon-image" src="images/pokemons/charmander.png" alt="charmander">
-                    </div>
-                    <div class="pokemon-title">
-                        charmander
-                    </div>
-                </div>
-                <!-- Pokemon Card -->
-                <div class="pokemon-card">
-                    <div class="background-wrapper">
-                        <div style="background-color: #6890F0"></div>
-                    </div>
-                    <span class="remove-pokemon"><i class="material-icons">close</i></span>
-                    <div class="image-wrapper">
-                        <img class="pokemon-image" src="images/pokemons/squirtle.png" alt="squirtle">
-                    </div>
-                    <div class="pokemon-title">
-                        squirtle
-                    </div>
-                </div>
+                <pokemon-card
+                    v-for="pokemon in filteredPokemons"
+                    :key="pokemon.name"
+                    :pokemon="pokemon"
+                    :type-color="TYPE_COLOR"
+                    @remove="removePokemon"
+                ></pokemon-card>
             </article>
         </main>
     </div>
+
+    <!-- Pokemon Card template for component -->
+    <script type="text/x-template" id="pokemon-card-template">
+        <div class="pokemon-card">
+            <div class="background-wrapper">
+                <div v-for="type in pokemon.types" :key="type" :style="{'background-color': typeColor[type]}"></div>
+            </div>
+            <span class="remove-pokemon" @click="remove"><i class="material-icons">close</i></span>
+            <div class="image-wrapper">
+                <img class="pokemon-image" :src="pokemon.image" alt="bulbasaur">
+            </div>
+            <div class="pokemon-title">
+                {{ pokemon.name }}
+            </div>
+        </div>
+    </script>
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
