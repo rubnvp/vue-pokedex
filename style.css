@@ -137,6 +137,7 @@ header, article, nav, aside {
 /* End Pokemon card */
 
 /* Nice input */
+/* from https://codepen.io/Takumari85/pen/RaYwpJ */
 .nice-input-wrapper {
     position: relative;
 }
@@ -161,6 +162,7 @@ header, article, nav, aside {
 /* End Nice input */
 
 /* Nice checkbox */
+/* from https://codepen.io/hansmaad/pen/qaGrQL */
 .md-checkbox {
   position: relative;
   display: flex;
