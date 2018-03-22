@@ -40,6 +40,10 @@ header, article, nav, aside {
     flex: 1;
 }
 
+.main-view {
+    overflow-y: auto;
+}
+
 .pokedex-filters {
     flex: 0 0 250px;
     display: flex;

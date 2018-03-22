@@ -2,8 +2,8 @@
 // Vue "normal JS" (ES5) example of use, more info about ES5 and ES6 https://medium.com/front-end-hacking/es6-vs-es5-9254f8390332
 // in the git branch 'es6' you can find the ES6 version (is highly support in some browsers but check first at https://caniuse.com/)
 
-// this set the component globally available in every Vue instance, usually it's better to just
-// define this as an object (the second parameter) an included in the Vue instance that you're gonna use it
+// this register the component to be global available in every Vue template, usually I prefer to define this as
+// an object (the second parameter) an include it in every Vue instance that I need (explicit better than implicit)
 // https://vuejs.org/v2/guide/components.html
 Vue.component('pokemon-card', {
     props: ['pokemon', 'typeColor'],
