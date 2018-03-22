@@ -10,4 +10,5 @@ If you know git, checkout to the branch 'es6' for a cleaner ES6 version (but cou
 
 ### Credits
 Nice input from @Takumari85: https://codepen.io/Takumari85/pen/RaYwpJ
+
 Nice checkbox from [@hansmaad](https://twitter.com/hansmaad): https://codepen.io/hansmaad/pen/qaGrQL
