@@ -1,4 +1,6 @@
-# Mundo Pokémon con HTML, CSS y VueJS 🐁🐙🐛🐟
+# Mundo Pokémon con HTML, CSS y JavaScript 🐁🐙🐛🐟
+
+![html, css & js](resources/HTML-CSS-JS.jpg)
 
 ## Índice
 

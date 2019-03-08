@@ -1,5 +1,7 @@
 # HTML
 
+![html5](resources/HTML5.png)
+
 ## Índice
 
 - [Introducción](README.md)

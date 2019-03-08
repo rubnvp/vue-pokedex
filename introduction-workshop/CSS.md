@@ -1,5 +1,7 @@
 # CSS
 
+![css3](resources/CSS3.jpg)
+
 ## Índice
 
 - [Introducción](README.md)
