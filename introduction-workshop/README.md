@@ -11,7 +11,7 @@
 
 te doy la bienvenida a este taller donde iremos montando paso a paso una pequeña Pokedex en una pagina web e iremos viendo cómo funcionan las tecnologías con las que se hacen webs actualmente :)
 
-![vue pokedex](images/vue-pokedex.png "Vue Pokedex")
+![vue pokedex](resources/vue-pokedex.png "Vue Pokedex")
 
 el resultado final puedes verlo [aquí](https://rubnvp.github.io/vue-pokedex/) aunque tardaremos un poco en llegar a él.
 
@@ -23,19 +23,19 @@ Antes que nada vamos a instalar un pequeño programa para escribir código, es e
 
 Vamos a ver como está hecha una web por dentro, piensa en una página, uhmmm... por ejemplo... Youtube?
 
-![youtube web](images/youtube.png "Web de Youtube")
+![youtube web](resources/youtube.png "Web de Youtube")
 
 Si te fijas, aunque las webs pueden ser de cualquier forma, normalmente casi todas tienen una estructura parecida, es decir, arriba tenemos una barra con el logo y demás cosas, que llamaremos `header`:
 
-![youtube header](images/youtube-header.png "Youtube header")
+![youtube header](resources/youtube-header.png "Youtube header")
 
 luego está la parte central con el contenido que más nos interesa, a esta parte la llamaremos `main`:
 
-![youtube main](images/youtube-main.png "Youtube main")
+![youtube main](resources/youtube-main.png "Youtube main")
 
 y por último a veces hay una barra a la izquierda o derecha con varias opciones y para ir a otras partes de la web, a esta la llamamos `aside`:
 
-![youtube aside](images/youtube-aside.png "Youtube aside")
+![youtube aside](resources/youtube-aside.png "Youtube aside")
 
 \- vale pero... pa k kieres saber eso?
 
@@ -47,11 +47,11 @@ Vale pues ahora que sabemos un poco las partes de una web vamos a "hackear" un p
 
 Con el botón derecho del ratón hacemos click en alguna parte de la web de Youtube y saldrá un menú parecido a este:
 
-![youtube inspect](images/youtube-inspect.png "Youtube inspect")
+![youtube inspect](resources/youtube-inspect.png "Youtube inspect")
 
 tenemos que hacer click en donde pone "Inspect" (o a lo mejor pone "Inspeccionar", "Inspeccionar elemento" o algo así), entonces se nos abre una ventana como esta:
 
-![youtube inspector](images/youtube-inspector.png "Youtube inspector")
+![youtube inspector](resources/youtube-inspector.png "Youtube inspector")
 
 WHAAATTT? 😱 da un poco de miedo no? no te preocupes :D, no se ha roto nada, tan solo estamos viendo "las tripas" de una web y como está estructurada por dentro. De hecho hasta puedes cambiar cosas, quitar trozos, modificar textos... etc
 
@@ -59,7 +59,7 @@ WHAAATTT? 😱 da un poco de miedo no? no te preocupes :D, no se ha roto nada, t
 
 Vamos a probar a cambiar por ejemplo el título del vídeo ese de Pikachu por algo así como "Pikachu pensando en chucherías", haciendo doble-click en el último título lo podemos cambiar por algo así:
 
-![pikachu candies](images/pikachu-candies.png "Pikachu candies")
+![pikachu candies](resources/pikachu-candies.png "Pikachu candies")
 
 y cambiado! aunque bueno... en verdad no hemos hackeado nada 😅, solo lo hemos cambiado en nuestro ordenador y si actualizas la página todos los cambios desaparecen 😕 no iba a ser tán fácil hackear una pagina, no? 😁
 

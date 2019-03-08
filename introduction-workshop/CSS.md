@@ -9,7 +9,7 @@
 
 Y aquí viene el segundo palabro raro! CSS significa Cascading Style Sheets y es el segundo lenguaje de programación que vamos a ver :) aunque de hecho... también lo hemos visto! estaba escondido debajo del HTML, justo aquí:
 
-![pokedex inspector styles](images/pokedex-inspector-styles.png)
+![pokedex inspector styles](resources/pokedex-inspector-styles.png)
 
 y es que CSS es el lenguaje de programación que nos va a ayudar a __dar estilos__ a nuestro HTML, esto quiere decir que cosas como los colores, tamaño, tipo de letra, posición... en general lo que hace "que se vea bien" una web está hecho con CSS.
 
@@ -37,7 +37,7 @@ pero si probamos a guardar y recargar la web no ocurrirá nada, esto es por que 
 
 de forma que ahora sí, guardamos, recargamos y debería salir algo como esto:
 
-![header with style](images/header-with-style.png)
+![header with style](resources/header-with-style.png)
 
 si te fijas, la forma que tiene el CSS de saber a que parte del HTML afecta es con la marca que hemos puesto en el html `class=main-header` que se relaciona con el css `.main-header`.
 
@@ -71,7 +71,7 @@ header, article, nav, aside {
 
 conseguiremos que quede como en la página original :)
 
-![header full style](images/header-full-style.png)
+![header full style](resources/header-full-style.png)
 
 perfecto pues ya tenemos nuestro header completo!! 🎉🎊🙌
 
@@ -126,15 +126,15 @@ dentro de `pokemons-list` es donde van a aparecer los pokemon así que vamos a p
 
 por lo que colocando el código anterior correctamente y guardando deberíamos ver algo como esto:
 
-![pokemon no image](images/pokemon-no-image.png)
+![pokemon no image](resources/pokemon-no-image.png)
 
 y... bueno... no parece que esté funcionando, no? 😅
 
 ### Práctica 5
 
-esto es por que le falta la imagen de bulbasaur, no la encuentra, puedes encontrar las imágenes [aquí](images.zip) descárgatelas y descomprime la carpeta al lado del index.html, una vez hecho esto la web se debería ver así:
+esto es por que le falta la imagen de bulbasaur, no la encuentra, puedes encontrar las imágenes [aquí](resources/images.zip) descárgatelas y descomprime la carpeta al lado del index.html, una vez hecho esto la web se debería ver así:
 
-![pokemon giant](images/pokemon-giant.png)
+![pokemon giant](resources/pokemon-giant.png)
 
 donde sale enorme el Bulbasaur! :O así que para darle un tamaño adecuado, así como los colores de fondo y poner más bonitas las letras tenemos que...
 
@@ -221,7 +221,7 @@ así que añadimos a nuestro código CSS las siguientes líneas:
 
 y pufff!! son muchas, y parecen muy complicadas, ya habrá otro día para llegar a entender todo lo que pone! :) lo importante es que gracias a esas líneas de CSS ahora nuestra web se nos ve así:
 
-![first pokemon](images/first-pokemon.png)
+![first pokemon](resources/first-pokemon.png)
 
 genial! ya hemos conseguido añadir a nuestro primer pokemon! 🎉💃🕺🎉
 

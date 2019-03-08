@@ -36,7 +36,7 @@ index.html
 ```
 guardamos y abrimos el archivo nos saldrá el navegador con algo tal que así:
 
-![first web](images/first-web.png "First web")
+![first web](resources/first-web.png "First web")
 
 Y voilà! ya tenemos nuestra primera página web!!! 🎉🎉
 
@@ -44,7 +44,7 @@ Bueno vale... no es que sea la web más elaborada que hayas visto nunca pero por
 
 De hecho puedes probar al igual que con la web de Youtube a hacer click en el __botón derecho -> inspeccionar__ para ver el código HTML que forma esta web (que es el mismo que hemos escrito antes)
 
-![first web inspector](images/first-web-inspector.png "First web inspector")
+![first web inspector](resources/first-web-inspector.png "First web inspector")
 
 ### Header
 
@@ -52,7 +52,7 @@ Bueno, vamos a empezar a hacer nuestra web para pokemons, como hemos visto antes
 
 Cuando lo encuentres copia el `header` dandole a "Copy element" (o "Copiar elemento"):
 
-![pokemon copy header](images/pokemon-copy-header.png "First web inspector")
+![pokemon copy header](resources/pokemon-copy-header.png "First web inspector")
 
 y pégalo justo antes del `<h1>ola k ase?</h1>` de forma que al final tu index.html queda como este:
 
@@ -74,7 +74,7 @@ index.html
 
 genial! pues guardamos, recargamos la página y tendríamos que ver algo como esto:
 
-![pokedexheader without styles](images/pokedex-header-without-styles.png)
+![pokedexheader without styles](resources/pokedex-header-without-styles.png)
 
 😐... bueno... quizá no es lo que esperábamos, no? amm... no sé... en la pagina de donde lo hemos copiado las letras son más grandes, el fondo es verde, ocupa todo el ancho de la pantalla... qué está pasando?
 
