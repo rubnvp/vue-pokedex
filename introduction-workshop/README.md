@@ -163,7 +163,7 @@ pero si probamos a guardar y recargar la web no ocurrirá nada, esto es por que 
 
 de forma que ahora sí, guardamos, recargamos y debería salir algo como esto:
 
-![header with style](header-with-style.png)
+![header with style](images/header-with-style.png)
 
 si te fijas, la forma que tiene el CSS de saber a que parte del HTML afecta es con la marca que hemos puesto en el html `class=main-header` que se relaciona con el css `.main-header`.
 
