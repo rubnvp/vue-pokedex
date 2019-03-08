@@ -1,6 +1,6 @@
 # HTML
 
-![html5](resources/HTML5.png)
+![html5](resources/HTML.png)
 
 ## Índice
 

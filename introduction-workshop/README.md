@@ -1,6 +1,6 @@
 # Mundo Pokémon con HTML, CSS y JavaScript 🐁🐙🐛🐟
 
-![html, css & js](resources/HTML-CSS-JS.jpg)
+![html, css & js](resources/HTML-CSS-JS.png)
 
 ## Índice
 

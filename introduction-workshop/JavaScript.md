@@ -1,6 +1,6 @@
 # JavaScript
 
-![JS](resources/JS.jpg)
+![JS](resources/JS.png)
 
 ## Índice
 

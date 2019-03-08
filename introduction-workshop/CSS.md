@@ -1,6 +1,6 @@
 # CSS
 
-![css3](resources/CSS3.jpg)
+![css3](resources/CSS.png)
 
 ## Índice
 
