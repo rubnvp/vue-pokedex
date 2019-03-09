@@ -1,6 +1,8 @@
 # Mundo Pokémon con HTML, CSS y JavaScript 🐁🐙🐛🐟
 
-![html, css & js](resources/HTML-CSS-JS.png)
+Link: [bit.do/taller-pokedex](http://bit.do/taller-pokedex)
+
+![html, css & js](resources/HTML-CSS-JS.png "Taller Pokedex")
 
 ## Índice
 
