@@ -99,7 +99,7 @@ index.html
     <header class="main-header">
         Vue - Pokedex
     </header>
-    <main class="main-view">
+    <main id="app" class="main-view">
         <article class="pokemons-list">
     
         </article>
@@ -226,5 +226,10 @@ y pufff!! son muchas, y parecen muy complicadas, ya habrá otro día para llegar
 ![first pokemon](resources/first-pokemon.png)
 
 genial! ya hemos conseguido añadir a nuestro primer pokemon! 🎉💃🕺🎉
+
+El diseño está pensado para mostrar:
+- la imagen del pokemon en el centro
+- el nombre del pokemon abajo
+- los tipos del pokemon como colores de fondo (morado para tipo veneno y verde para tipo planta)
 
 👉 Continúa en [JavaScript](JavaScript.md)
