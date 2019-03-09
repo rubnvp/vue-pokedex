@@ -167,6 +167,7 @@ por cierto el color `#F8D030` es un amarillo, puedes comprobarlo [aquí](https:/
 
 Entonces para poner un pokemon en la pantalla solo necesitamos su información básica en el JS, así que vamos a copiar de [aquí](../data/pokemons.json) todos los datos y los guardamos en un fichero llamado `pokemons.js` poniendo `var pokemons = ` justo antes de forma que quedaría así:
 
+pokemons.js
 ```js
 var pokemons = [
     {
