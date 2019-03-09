@@ -9,7 +9,7 @@
 - [CSS](CSS.md)
 - JavaScript
 
-Enhorabuena por llegar hasta aquí! seguro que tienes muchas dudas sobre qué acabamos de hacer y como funciona todo esto pero seguimos adelante con el último palabro del taller: JavaScript! 🙌
+Enhorabuena por llegar hasta aquí! seguro que tienes muchas dudas sobre le que acabamos de hacer y como funciona todo esto pero seguimos adelante con el último palabro del taller: JavaScript! 🙌
 
 Personalmente es que el más me gusta de los 3 lenguajes ya que puedes hacer muchíiiiiiisimas cosas con él pero también suele ser el más dificil de aprender (aunque cuando le pillas el truco te prometo que mola usarlo 🤗).
 
@@ -24,7 +24,9 @@ Y ahora con JavaScript vamos a poder darle **funcionalidad** a los elementos del
 Para poder programar en JavaScript le tenemos que indicar al HTML dónde se encuentra el fichero JS (como hacíamos con el CSS) para ello vamos a añadir las siguientes líneas justo antes de la etiqueta `</body>` (cuando se cierra, abajo del todo):
 
 ```html
-<script src="app.js"></script>
+    // ...
+    <script src="app.js"></script>
+</body>
 ```
 
 y luego creamos el fichero app.js al lado del index.html:
@@ -39,6 +41,8 @@ si todo ha salido bien deberías ver en el inspector de la web, en el apartado *
 ![hello world js](resources/hello-world-js.png)
 
 enhorabuena! acabas de programar tu primer programa en JavaScript! 😄😄 (un programa que solo pone ese mensaje pero _it's something_)
+
+¯\\\_(ツ)\_/¯
 
 Pero como vamos a usar JavaScript con el HTML y esto a veces puede ser un poco... tramboliko! hay gente que ha escrito mucho código para simplificar este problema y lo junta todo en un fichero que se suele llamar **librería** (por que hay como mucho código escrito, como una biblioteca) y la librería que vamos a usar nosotros se llama **VueJS** (JS es la forma corta de escribir JavaScript) que es una que me gusta ya que nos hace las cosas un poco más fáciles :)
 
@@ -87,7 +91,7 @@ var app = new Vue({
 });
 ```
 
-y en el `index.html` le indicamos donde tiene que colocar el nombre de "Jirafasaurio" poniendoselo entre dobles llaves 🙂
+y en el `index.html` le indicamos donde tiene que colocar el nombre de "Jirafasaurio" poniendoselo entre dobles llaves y sustituyendo bulbasaur 🙂
 
 ```html
 <div class="pokemon-title">
@@ -229,7 +233,7 @@ si todo ha salido bien veremos (ya por fin!) a todos nuestros pokemons en la web
 
 ![all pokemons](resources/all-pokemons.png)
 
-y felicidades!! si has llegado hasta aquí acabas de crear un pequeña Pokedex donde mostrar tus pokemons 🎉🎉 😊
+y felicidades!! si has llegado hasta aquí acabas de crear una pequeña Pokedex donde mostrar tus pokemons 🎉🎉 😊
 
 Mas adelante añadiré en este tutorial los filtros de la izquierda (búsqueda por nombre y filtro por tipo) para poder buscar rápidamente a nuestros pokemons!
 

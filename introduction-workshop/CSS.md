@@ -17,7 +17,7 @@ y es que CSS es el lenguaje de programación que nos va a ayudar a __dar estilos
 
 ### Práctica 3
 
-Para añadir el CSS vamos a que crear un fichero que vamos a llamar `style.css` y vamos a guardar unos estilos iniciales:
+Para añadir el CSS vamos a que crear un fichero que vamos a llamar `style.css` al lado del index.html y vamos a guardar unos estilos iniciales:
 
 style.css
 ```css
@@ -41,7 +41,7 @@ de forma que ahora sí, guardamos, recargamos y debería salir algo como esto:
 
 ![header with style](resources/header-with-style.png)
 
-si te fijas, la forma que tiene el CSS de saber a que parte del HTML afecta es con la marca que hemos puesto en el html `class=main-header` que se relaciona con el css `.main-header`.
+si te fijas, la forma que tiene el CSS de saber a que parte del HTML afecta es con la marca que hemos puesto en el html `class="main-header"` que se relaciona con el css `.main-header`.
 
 y si añadimos un poco más de estilos como estos:
 
@@ -231,5 +231,7 @@ El diseño está pensado para mostrar:
 - la imagen del pokemon en el centro
 - el nombre del pokemon abajo
 - los tipos del pokemon como colores de fondo (morado para tipo veneno y verde para tipo planta)
+
+¿sabrías indicar en qué parte del HTML estamos poniendo eso? :)
 
 👉 Continúa en [JavaScript](JavaScript.md)
