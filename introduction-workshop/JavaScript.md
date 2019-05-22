@@ -128,7 +128,7 @@ y sustituimos el HTML donde definíamos un pokemon por este otro:
 ```html
 <div class="pokemon-card">
     <div class="background-wrapper">
-        <div :style="{'background-color': COLOR[pokemon.types[0]]}"></div>
+        <div :style="{'background-color': typeColor[pokemon.types[0]]}"></div>
     </div>
     <span class="remove-pokemon"><i class="material-icons">close</i></span>
     <div class="image-wrapper">
