@@ -1,9 +1,29 @@
-# Vue Pokedex
+# pokemon-vue
 
-Just open index.html and it will work :)
+## Project setup
+```
+yarn install
+```
 
-![screensot demo](images/screenshot-demo.png "Screenshot Demo")
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
 
-### ES6 version
+### Compiles and minifies for production
+```
+yarn run build
+```
 
-If you know git, checkout to the branch 'es6' for a cleaner ES6 version (but could not work in all browsers)
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
