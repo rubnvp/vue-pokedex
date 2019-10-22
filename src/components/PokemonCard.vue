@@ -15,7 +15,10 @@
 
 <script>
 export default {
-  props: ["pokemon", "typeColor"],
+  props: {
+    pokemon: Object,
+    typeColor: Object,
+  },
   methods: {
     remove() {
       this.$emit("remove", this.pokemon);
