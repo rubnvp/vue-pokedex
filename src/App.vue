@@ -9,7 +9,13 @@
       <!-- Searchbox -->
       <!-- don't get scared, v-model is just syntactic sugar to simulate two-way data binding -->
       <!-- more info about the Vue binding in https://vuejs.org/v2/guide/forms.html#Text -->
-      <nice-input v-model="searchText"></nice-input>
+        <!-- v-model="searchText" -->
+      <nice-input
+        placeholder="Search pokemon"
+        :search-text.sync="searchText"
+      />
+        <!-- :search-text="searchText"
+        @update:searchText="newVal => searchText = newVal" -->
       <!-- Checkboxes -->
       <p class="checkboxes-list-title">Type</p>
       <div class="checkboxes-list">
@@ -32,15 +38,42 @@
 
     <!-- Pokemons list -->
     <main class="main-view">
-      <article class="pokemons-list">
+
+
+      <my-pokemons :pokemons="pokemons" v-if="false">
+
+        <template #row="{ index, pokemon }">
+          <td>{{ index }} - {{ pokemon.name }}</td>
+          <td>{{ pokemon.types.join(', ') }}</td>
+        </template>
+
+      </my-pokemons>
+
+
+      <article class="pokemons-list" v-else>
+        
+        <square-card
+          image="https://pbs.twimg.com/profile_images/1093807089477140480/g_s6tNzV_400x400.jpg"
+          :background-colors="['orange']"
+          :is-image-circle="true"
+          @remove="removePokemon"
+        >
+          <template #footer>
+            <button>
+              <i class="material-icons">done</i>
+              Votar
+            </button>
+          </template>
+        </square-card>
+
         <!-- Pokemon Card -->
-        <pokemon-card
+        <!-- <pokemon-card
           v-for="pokemon in filteredPokemons"
           :key="pokemon.name"
           :pokemon="pokemon"
           :type-color="TYPE_COLOR"
           @remove="removePokemon"
-        ></pokemon-card>
+        ></pokemon-card> -->
       </article>
     </main>
   </div>
@@ -49,7 +82,8 @@
 
 <script>
 import NiceInput from './components/NiceInput';
-import PokemonCard from './components/PokemonCard';
+import SquareCard from './components/SquareCard';
+import MyPokemons from './components/MyPokemons';
 
 export default {
     data() {
@@ -96,7 +130,8 @@ export default {
     },
     components: {
         NiceInput,
-        PokemonCard,
+        SquareCard,
+        MyPokemons,
     },
 };
 </script>

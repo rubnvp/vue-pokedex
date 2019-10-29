@@ -3,20 +3,22 @@
         <input
             class="nice-input"
             type="text"
-            placeholder="Search by name"
-            :value="value"
+            v-bind="$attrs"
+            :value="searchText"
             @input="emitInput"
         />
+            <!-- v-model="searchText" -->
         <span class="focus-border"><i></i></span>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['value'],
+    props: ['searchText'],
+    inheritAttrs: false,
     methods: {
         emitInput(event) {
-            this.$emit('input', event.target.value);
+            this.$emit('update:searchText', event.target.value);
         }
     }
 }

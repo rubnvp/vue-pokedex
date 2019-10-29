@@ -1,23 +1,28 @@
 <template>
   <div class="pokemon-card">
     <div class="background-wrapper">
-      <div v-for="type in pokemon.types" :key="type" :style="{'background-color': typeColor[type]}"></div>
+      <div v-for="color in backgroundColors" :key="color" :style="{'background-color': color}"></div>
     </div>
     <span class="remove-pokemon" @click="remove">
       <i class="material-icons">close</i>
     </span>
-    <div class="image-wrapper">
-      <img class="pokemon-image" :src="pokemon.image" alt="bulbasaur" />
+    <slot name="main">
+      <div class="image-wrapper">
+        <img class="pokemon-image" :class="{'pokemon-image--rounded': isImageCircle}" :src="image" alt="square-card image" />
+      </div>
+    </slot>
+    <div class="pokemon-title">
+      <slot name="footer">Nombre</slot>
     </div>
-    <div class="pokemon-title">{{ pokemon.name }}</div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    pokemon: Object,
-    typeColor: Object,
+    image: String,
+    isImageCircle: Boolean,
+    backgroundColors: Array,
   },
   methods: {
     remove() {
@@ -83,6 +88,9 @@ export default {
 
   .pokemon-image {
     height: 110px;
+    &--rounded {
+      border-radius: 50%;
+    }
   }
 
   .pokemon-title {
