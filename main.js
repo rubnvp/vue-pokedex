@@ -62,7 +62,7 @@ var app = new Vue({
         var that = this;
         // fetch native api, https://caniuse.com/#feat=fetch
         // you also have the pokemon json info in data/pokemons.json but you will need a local server to serve it
-        fetch('https://api.jsonbin.io/b/5ab37f77989617146bd6eb29') 
+        fetch('https://raw.githubusercontent.com/rubnvp/vue-pokedex/master/data/pokemons.json') 
             .then(function(response){
                 return response.json();
             })
