@@ -1,0 +1,10 @@
+{
+    "Vue": "#41B883",
+    "React": "#00d8ff",
+    "Angular": "#B52E31",
+    "Aurelia": "#C92483",
+    "LitElement": "#59B0F9",
+    "Ember": "#f23819",
+    "Backbone": "#A8A878",
+    "Svelte": "#FF3E00"
+}

@@ -29,7 +29,7 @@ header, article, nav, aside {
 
 .main-header {
     text-transform: uppercase;
-    background: #42b883;
+    background: #15D9C4;
     color: white;
     font-size: 35px;
     padding: 0.5em;
@@ -45,7 +45,7 @@ header, article, nav, aside {
     overflow-y: auto;
 }
 
-.pokedex-filters {
+.vuedex-filters {
     flex: 0 0 250px;
     display: flex;
     flex-direction: column;
@@ -62,15 +62,15 @@ header, article, nav, aside {
     overflow-y: auto;
 }
 
-.pokemons-list {
+.vuers-list {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
 }
 
-/* Pokemon card */
-.pokemon-card {
+/* vuer card */
+.vuer-card {
     margin: 5px;
     position: relative;
     height: 170px;
@@ -82,13 +82,14 @@ header, article, nav, aside {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     overflow: hidden;
+    border-radius: 2px;
 }
 
-.pokemon-card:hover {
+.vuer-card:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.pokemon-card .background-wrapper {
+.vuer-card .background-wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -96,11 +97,11 @@ header, article, nav, aside {
     z-index: -1;
 }
 
-.pokemon-card .background-wrapper div {
+.vuer-card .background-wrapper div {
     flex-grow: 1;
 }
 
-.pokemon-card .remove-pokemon {
+.vuer-card .remove-vuer {
     display: none;
     position: absolute;
     top: 0;
@@ -108,26 +109,27 @@ header, article, nav, aside {
     cursor: pointer;
 }
 
-.pokemon-card:hover .remove-pokemon {
+.vuer-card:hover .remove-vuer {
     display: inline-block;
 }
 
-.pokemon-card .remove-pokemon:hover {
+.vuer-card .remove-vuer:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.pokemon-card .image-wrapper {
+.vuer-card .image-wrapper {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pokemon-card .pokemon-image {
+.vuer-card .vuer-image {
     height: 110px;
+    border-radius: 50%;
 }
 
-.pokemon-card .pokemon-title {
+.vuer-card .vuer-title {
     height: 40px;
     background-color: rgba(0,0,0,.5);
     display: flex;
@@ -135,7 +137,7 @@ header, article, nav, aside {
     align-items: center;
     text-transform: capitalize;
 }
-/* End Pokemon card */
+/* End vuer card */
 
 /* Nice input */
 /* from https://codepen.io/Takumari85/pen/RaYwpJ */
@@ -151,10 +153,10 @@ header, article, nav, aside {
 }
 .nice-input{border: 1px solid #ccc; padding: 7px 14px 9px; transition: 0.4s;}
 .nice-input ~ .focus-border:before,
-.nice-input ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.3s;}
+.nice-input ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #15D9C4; transition: 0.3s;}
 .nice-input ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
 .nice-input ~ .focus-border i:before,
-.nice-input ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.4s;}
+.nice-input ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #15D9C4; transition: 0.4s;}
 .nice-input ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0;}
 .nice-input:focus ~ .focus-border:before,
 .nice-input:focus ~ .focus-border:after{width: 100%; transition: 0.3s;}
@@ -206,7 +208,7 @@ header, article, nav, aside {
   visibility: hidden;
 }
 .md-checkbox input[type="checkbox"]:checked + label:before {
-  background: #4caf50;
+  background: #15D9C4;
   border: none;
 }
 .md-checkbox input[type="checkbox"]:checked + label:after {

@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="shortcut icon" href="images/favicon.ico">
-      <title>Vue Pokedex</title>
+      <title>Vuers</title>
       <!-- CSS -->
       <link rel="stylesheet" href="style.css">
       <!-- <style>[v-cloak]{display: none;}</style> -->
@@ -13,73 +13,95 @@
    <body>
       <!-- Header -->
       <header class="main-header">
-         Vue - Pokedex
+         Vuers
       </header>
       <!-- Content -->
       <div id="app" class="main-content" v-cloak>
          <!-- Left Side Filters -->
-         <aside class="pokedex-filters">
+         <aside class="vuedex-filters">
             <!-- Searchbox -->
             <div class="nice-input-wrapper">
                <input type="text" placeholder="Search by name" class="nice-input">
                <span class="focus-border"><i></i></span>
             </div>
             <!-- Type Filters -->
-            <p class="checkboxes-list-title">Type</p>
+            <p class="checkboxes-list-title">Framework JS</p>
             <div class="checkboxes-list">
                <!-- Type Selector -->
                <div class="md-checkbox">
-                  <input id="checkbox-grass" type="checkbox" value="grass">
-                  <label for="checkbox-grass">
-                     <i class="material-icons" style="color: rgb(120, 200, 80);">lens</i>
-                     <span class="label-title">grass</span>
+                  <input id="checkbox-Vue" type="checkbox" value="Vue">
+                  <label for="checkbox-Vue">
+                     <i class="material-icons" style="color: #41B883;">lens</i>
+                     <span class="label-title">Vue</span>
                   </label>
                </div>
                <!-- Type Selector -->
                <div class="md-checkbox">
-                  <input id="checkbox-poison" type="checkbox" value="poison">
-                  <label for="checkbox-poison">
-                     <i class="material-icons" style="color: rgb(160, 64, 160);">lens</i>
-                     <span class="label-title">poison</span>
+                  <input id="checkbox-React" type="checkbox" value="React">
+                  <label for="checkbox-React">
+                     <i class="material-icons" style="color: #00d8ff;">lens</i>
+                     <span class="label-title">React</span>
+                  </label>
+               </div>
+               <!-- Type Selector -->
+               <div class="md-checkbox">
+                  <input id="checkbox-Angular" type="checkbox" value="Angular">
+                  <label for="checkbox-Angular">
+                     <i class="material-icons" style="color: #B52E31;">lens</i>
+                     <span class="label-title">Angular</span>
                   </label>
                </div>
 
             </div>
          </aside>
-         <!-- Pokemons View -->
+         <!-- Vuers View -->
          <main class="main-view">
-            <!-- Full Pokemons List in: https://raw.githubusercontent.com/rubnvp/vue-pokedex/master/data/pokemons.json -->
-            <article class="pokemons-list">
-               <!-- Pokemon Card -->
-               <div class="pokemon-card">
+            <!-- Full Vuers List in: https://api.github.com/orgs/vuejs/public_members -->
+            <article class="vuers-list">
+               <!-- Vuer Card -->
+               <div class="vuer-card">
                   <div class="background-wrapper">
-                     <div style="background-color: rgb(160, 64, 160);"></div>
-                     <div style="background-color: rgb(120, 200, 80);"></div>
+                     <div style="background-color: #41B883;"></div>
                   </div>
-                  <span class="remove-pokemon">
+                  <span class="remove-vuer">
                      <i class="material-icons">close</i>
                   </span> 
                   <div class="image-wrapper">
-                     <img src="images/pokemons/bulbasaur.png" alt="bulbasaur" class="pokemon-image">
+                     <img src="https://avatars1.githubusercontent.com/u/2281088?v=4" alt="Sarah Drasner" class="vuer-image">
                   </div>
-                  <div class="pokemon-title">
-                     bulbasaur
+                  <div class="vuer-title">
+                     Sarah Drasner
                   </div>
                </div>
-               <!-- Pokemon Card -->
-               <div class="pokemon-card">
+               <!-- Vuer Card -->
+               <div class="vuer-card">
                   <div class="background-wrapper">
-                     <div style="background-color: rgb(160, 64, 160);"></div>
-                     <div style="background-color: rgb(120, 200, 80);"></div>
+                     <div style="background-color: #00d8ff;"></div>
+                     <div style="background-color: #B52E31;"></div>
                   </div>
-                  <span class="remove-pokemon">
+                  <span class="remove-vuer">
                      <i class="material-icons">close</i>
                   </span> 
                   <div class="image-wrapper">
-                     <img src="images/pokemons/ivysaur.png" alt="bulbasaur" class="pokemon-image">
+                     <img src="https://avatars1.githubusercontent.com/u/499550?v=4" alt="Evan You" class="vuer-image">
                   </div>
-                  <div class="pokemon-title">
-                     ivysaur
+                  <div class="vuer-title">
+                     Evan You
+                  </div>
+               </div>
+               <!-- Vuer Card -->
+               <div class="vuer-card">
+                  <div class="background-wrapper">
+                     <div style="background-color: #B52E31;"></div>
+                  </div>
+                  <span class="remove-vuer">
+                     <i class="material-icons">close</i>
+                  </span> 
+                  <div class="image-wrapper">
+                     <img src="https://avatars0.githubusercontent.com/u/9197791?v=4" alt="Adrià Fontcuberta" class="vuer-image">
+                  </div>
+                  <div class="vuer-title">
+                     Adrià Fontcuberta
                   </div>
                </div>
 

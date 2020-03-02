@@ -1,0 +1,38 @@
+[
+   {
+      "login": "yyx990803",
+      "id": 499550,
+      "frameworks": ["Vue", "Angular"],
+      "avatar_url": "https://avatars1.githubusercontent.com/u/499550?v=4"
+   },
+   {
+      "login": "sdras",
+      "id": 2281088,
+      "frameworks": ["Vue", "Ember"],
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2281088?v=4"
+   },
+   {
+      "login": "posva",
+      "id": 664177,
+      "frameworks": ["Svelte"],
+      "avatar_url": "https://avatars0.githubusercontent.com/u/664177?v=4"
+   },
+   {
+      "login": "nomadtechie",
+      "id": 6717823,
+      "frameworks": ["Aurelia"],
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6717823?v=4"
+   },
+   {
+      "login": "afontcu",
+      "id": 9197791,
+      "frameworks": ["Angular"],
+      "avatar_url": "https://avatars0.githubusercontent.com/u/9197791?v=4"
+   },
+   {
+      "login": "gustojs",
+      "id": 25644507,
+      "frameworks": ["Backbone", "Vue"],
+      "avatar_url": "https://avatars3.githubusercontent.com/u/25644507?v=4"
+   }
+]
