@@ -137,7 +137,7 @@ header, article, nav, aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 /* End vuer card */
 
