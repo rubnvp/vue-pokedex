@@ -2,37 +2,43 @@
    {
       "login": "yyx990803",
       "id": 499550,
-      "frameworks": ["Vue", "Angular"],
-      "avatar_url": "https://avatars1.githubusercontent.com/u/499550?v=4"
+      "frameworks": ["Vue", "React"],
+      "avatar_url": "https://avatars1.githubusercontent.com/u/499550?v=4",
+      "html_url": "https://github.com/yyx990803"
    },
    {
       "login": "sdras",
       "id": 2281088,
-      "frameworks": ["Vue", "Ember"],
-      "avatar_url": "https://avatars1.githubusercontent.com/u/2281088?v=4"
-   },
-   {
-      "login": "posva",
-      "id": 664177,
-      "frameworks": ["Svelte"],
-      "avatar_url": "https://avatars0.githubusercontent.com/u/664177?v=4"
-   },
-   {
-      "login": "nomadtechie",
-      "id": 6717823,
-      "frameworks": ["Aurelia"],
-      "avatar_url": "https://avatars3.githubusercontent.com/u/6717823?v=4"
+      "frameworks": ["Vue"],
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2281088?v=4",
+      "html_url": "https://github.com/sdras"
    },
    {
       "login": "afontcu",
       "id": 9197791,
       "frameworks": ["Angular"],
-      "avatar_url": "https://avatars0.githubusercontent.com/u/9197791?v=4"
+      "avatar_url": "https://avatars0.githubusercontent.com/u/9197791?v=4",
+      "html_url": "https://github.com/afontcu"
+   },
+   {
+      "login": "posva",
+      "id": 664177,
+      "frameworks": ["Svelte"],
+      "avatar_url": "https://avatars0.githubusercontent.com/u/664177?v=4",
+      "html_url": "https://github.com/posva"
+   },
+   {
+      "login": "nomadtechie",
+      "id": 6717823,
+      "frameworks": ["Aurelia"],
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6717823?v=4",
+      "html_url": "https://github.com/nomadtechie"
    },
    {
       "login": "gustojs",
       "id": 25644507,
-      "frameworks": ["Backbone", "Vue"],
-      "avatar_url": "https://avatars3.githubusercontent.com/u/25644507?v=4"
+      "frameworks": ["LitElement", "Backbone"],
+      "avatar_url": "https://avatars3.githubusercontent.com/u/25644507?v=4",
+      "html_url": "https://github.com/gustojs"
    }
 ]

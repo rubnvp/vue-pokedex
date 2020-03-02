@@ -130,6 +130,8 @@ header, article, nav, aside {
 }
 
 .vuer-card .vuer-title {
+    color: white;
+    text-decoration: none;
     height: 40px;
     background-color: rgba(0,0,0,.5);
     display: flex;
