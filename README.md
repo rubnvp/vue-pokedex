@@ -1,8 +1,6 @@
 # Vue Pokedex
 
-Just open index.html and it will work :)
-
-![screensot demo](images/screenshot-demo.png "Screenshot Demo")
+Adalavuers version.
 
 ### ES6 version
 
