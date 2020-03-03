@@ -67,6 +67,7 @@ header, article, nav, aside {
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
+    height: calc(100vh - 76px);
 }
 
 /* vuer card */
