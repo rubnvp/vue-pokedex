@@ -5,15 +5,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="shortcut icon" href="images/favicon.ico">
-      <title>Vuers</title>
+      <title>AdalaVuers</title>
       <!-- CSS -->
       <link rel="stylesheet" href="style.css">
-      <!-- <style>[v-cloak]{display: none;}</style> -->
+      <style>[v-cloak]{display: none;}</style>
    </head>
    <body>
       <!-- Header -->
       <header class="main-header">
-         Vuers
+         AdalaVuers
       </header>
       <!-- Content -->
       <div id="app" class="main-content" v-cloak>
@@ -21,66 +21,18 @@
          <aside class="vuedex-filters">
             <!-- Searchbox -->
             <div class="nice-input-wrapper">
-               <input type="text" placeholder="Search by username" class="nice-input">
+               <input v-model="searchText" type="text" placeholder="Search by username" class="nice-input">
                <span class="focus-border"><i></i></span>
             </div>
             <!-- Type Filters -->
             <p class="checkboxes-list-title">Framework JS</p>
             <div class="checkboxes-list">
                <!-- Type Selector -->
-               <div class="md-checkbox">
-                  <input id="checkbox-Vue" type="checkbox" value="Vue">
-                  <label for="checkbox-Vue">
-                     <i class="material-icons" style="color: #41B883;">lens</i>
-                     <span class="label-title">Vue</span>
-                  </label>
-               </div>
-               <!-- Type Selector -->
-               <div class="md-checkbox">
-                  <input id="checkbox-React" type="checkbox" value="React">
-                  <label for="checkbox-React">
-                     <i class="material-icons" style="color: #00d8ff;">lens</i>
-                     <span class="label-title">React</span>
-                  </label>
-               </div>
-               <!-- Type Selector -->
-               <div class="md-checkbox">
-                  <input id="checkbox-Angular" type="checkbox" value="Angular">
-                  <label for="checkbox-Angular">
-                     <i class="material-icons" style="color: #B52E31;">lens</i>
-                     <span class="label-title">Angular</span>
-                  </label>
-               </div>
-               <!-- Type Selector -->
-               <div class="md-checkbox">
-                  <input id="checkbox-Svelte" type="checkbox" value="Svelte">
-                  <label for="checkbox-Svelte">
-                     <i class="material-icons" style="color: #FF3E00;">lens</i>
-                     <span class="label-title">Svelte</span>
-                  </label>
-               </div>
-               <!-- Type Selector -->
-               <div class="md-checkbox">
-                  <input id="checkbox-Aurelia" type="checkbox" value="Aurelia">
-                  <label for="checkbox-Aurelia">
-                     <i class="material-icons" style="color: #C92483;">lens</i>
-                     <span class="label-title">Aurelia</span>
-                  </label>
-               </div>
-               <!-- Type Selector -->
-               <div class="md-checkbox">
-                  <input id="checkbox-LitElement" type="checkbox" value="LitElement">
-                  <label for="checkbox-LitElement">
-                     <i class="material-icons" style="color: #59B0F9;">lens</i>
-                     <span class="label-title">LitElement</span>
-                  </label>
-               </div>
-               <!-- Type Selector -->
-               <div class="md-checkbox">
-                  <input id="checkbox-Ember" type="checkbox" value="Ember">
-                  <label for="checkbox-Ember">
-                     <i class="material-icons" style="color: #f23819;">lens</i>
-                     <span class="label-title">Ember</span>
+               <div v-for="(color, framework) in COLOR" :key="framework" class="md-checkbox">
+                  <input :id="`checkbox-${framework}`" type="checkbox" :value="framework" v-model="checkedFrameworks">
+                  <label :for="`checkbox-${framework}`">
+                     <i class="material-icons" :style="{color}">lens</i>
+                     <span class="label-title">{{ framework }}</span>
                   </label>
                </div>
 
@@ -91,100 +43,25 @@
             <!-- Full Vuers List in: https://api.github.com/orgs/vuejs/public_members -->
             <article class="vuers-list">
                <!-- Vuer Card -->
-               <div class="vuer-card">
+               <div v-for="user in filteredUsers" :key="user.id" class="vuer-card">
                   <div class="background-wrapper">
-                     <div style="background-color: #41B883;"></div>
-                     <div style="background-color: #00d8ff;"></div>
+                     <div v-for="framework in user.frameworks" :key="framework" :style="{'background-color': COLOR[framework]}"></div>
                   </div>
-                  <span class="remove-vuer">
+                  <span class="remove-vuer" @click="removeUser(user)">
                      <i class="material-icons">close</i>
-                  </span> 
+                  </span>
                   <div class="image-wrapper">
-                     <img src="https://avatars1.githubusercontent.com/u/499550?v=4" alt="Evan You" class="vuer-image">
+                     <img :src="user.avatar_url" :alt="user.login" class="vuer-image">
                   </div>
-                  <a href="https://github.com/yyx990803" target="_blank" class="vuer-title">
-                     @yyx990803
-                  </a>
-               </div>
-               <!-- Vuer Card -->
-               <div class="vuer-card">
-                  <div class="background-wrapper">
-                     <div style="background-color: #41B883;"></div>
-                  </div>
-                  <span class="remove-vuer">
-                     <i class="material-icons">close</i>
-                  </span> 
-                  <div class="image-wrapper">
-                     <img src="https://avatars1.githubusercontent.com/u/2281088?v=4" alt="Sarah Drasner" class="vuer-image">
-                  </div>
-                  <a href="https://github.com/sdras" target="_blank" class="vuer-title">
-                     @sdras
-                  </a>
-               </div>
-               <!-- Vuer Card -->
-               <div class="vuer-card">
-                  <div class="background-wrapper">
-                     <div style="background-color: #FF3E00;"></div>
-                  </div>
-                  <span class="remove-vuer">
-                     <i class="material-icons">close</i>
-                  </span> 
-                  <div class="image-wrapper">
-                     <img src="https://avatars0.githubusercontent.com/u/664177?v=4" alt="Eduardo San Martin" class="vuer-image">
-                  </div>
-                  <a href="https://github.com/posva" target="_blank" class="vuer-title">
-                     @posva
-                  </a>
-               </div>
-               <!-- Vuer Card -->
-               <div class="vuer-card">
-                  <div class="background-wrapper">
-                     <div style="background-color: #C92483;"></div>
-                  </div>
-                  <span class="remove-vuer">
-                     <i class="material-icons">close</i>
-                  </span> 
-                  <div class="image-wrapper">
-                     <img src="https://avatars3.githubusercontent.com/u/6717823?v=4" alt="Amal Hussein" class="vuer-image">
-                  </div>
-                  <a href="https://github.com/nomadtechie" target="_blank" class="vuer-title">
-                     @nomadtechie
-                  </a>
-               </div>
-               <!-- Vuer Card -->
-               <div class="vuer-card">
-                  <div class="background-wrapper">
-                     <div style="background-color: #59B0F9;"></div>
-                     <div style="background-color: #f23819;"></div>
-                  </div>
-                  <span class="remove-vuer">
-                     <i class="material-icons">close</i>
-                  </span> 
-                  <div class="image-wrapper">
-                     <img src="https://avatars3.githubusercontent.com/u/25644507?v=4" alt="Gusto" class="vuer-image">
-                  </div>
-                  <a href="https://github.com/gustojs" target="_blank" class="vuer-title">
-                     @gustojs
-                  </a>
-               </div>
-               <!-- Vuer Card -->
-               <div class="vuer-card">
-                  <div class="background-wrapper">
-                     <div style="background-color: #B52E31;"></div>
-                  </div>
-                  <span class="remove-vuer">
-                     <i class="material-icons">close</i>
-                  </span> 
-                  <div class="image-wrapper">
-                     <img src="https://avatars0.githubusercontent.com/u/9197791?v=4" alt="Adrià Fontcuberta" class="vuer-image">
-                  </div>
-                  <a href="https://github.com/afontcu" target="_blank" class="vuer-title">
-                     @afontcu
+                  <a :href="user.html_url" target="_blank" class="vuer-title">
+                     @{{ user.login }}
                   </a>
                </div>
 
             </article>
          </main>
       </div>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="main.js"></script>
    </body>
 </html>
