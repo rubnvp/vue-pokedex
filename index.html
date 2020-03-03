@@ -41,7 +41,7 @@
          <!-- Vuers View -->
          <main class="main-view">
             <!-- Full Vuers List in: https://api.github.com/orgs/vuejs/public_members -->
-            <article class="vuers-list">
+            <transition-group name="bounce" tag="article" class="vuers-list">
                <!-- Vuer Card -->
                <div v-for="user in filteredUsers" :key="user.id" class="vuer-card">
                   <div class="background-wrapper">
@@ -57,8 +57,8 @@
                      @{{ user.login }}
                   </a>
                </div>
-
-            </article>
+               
+            </transition-group>
          </main>
       </div>
       <script src="https://unpkg.com/vue"></script>
