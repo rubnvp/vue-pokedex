@@ -47,7 +47,7 @@ var app = new Vue({
                         .find(function(type){ // for each pokemon type we try to find if it's included in the array of selectedPokemonTypes 
                             return that.selectedPokemonTypes.includes(type);
                         });
-                });;
+                });
         },
     },
     methods: {
