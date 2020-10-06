@@ -49,7 +49,7 @@ const app = new Vue({
         },
     },
     created() { // Component Lyfecycle Diagram https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
-        fetch('https://api.jsonbin.io/b/5ab37f77989617146bd6eb29') 
+        fetch('https://raw.githubusercontent.com/rubnvp/vue-pokedex/master/data/pokemons.json') 
             .then(response => response.json())
             .then(pokemons => this.pokemons = pokemons);
     },
