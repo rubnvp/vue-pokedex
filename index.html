@@ -31,7 +31,7 @@
                 <!-- nice-checkbox -->
                 <!-- more info about the Vue binding in https://vuejs.org/v2/guide/forms.html#Checkbox -->
                 <div class="md-checkbox" v-for="(color, type) in TYPE_COLOR" :key="type">
-                    <input :id="'checkbox-'+type" type="checkbox" :value="type" v-model="selectedPokemonTypes">
+                    <input :id="'checkbox-'+type" type="checkbox" :value="type" v-model="selectedTypes">
                     <label :for="'checkbox-'+type">
                         <i class="material-icons" :style="{color: color}">lens</i>
                         <span class="label-title">{{ type }}</span>
@@ -44,31 +44,27 @@
         <main class="main-view">
             <article class="pokemons-list">
                 <!-- Pokemon Card -->
-                <pokemon-card
+                <div
+                    class="pokemon-card"
                     v-for="pokemon in filteredPokemons"
                     :key="pokemon.name"
-                    :pokemon="pokemon"
-                    :type-color="TYPE_COLOR"
-                    @remove="removePokemon"
-                ></pokemon-card>
+                >
+                    <div class="background-wrapper">
+                        <div v-for="type in pokemon.types" :key="type" :style="{'background-color': TYPE_COLOR[type]}"></div>
+                    </div>
+                    <span class="remove-pokemon" @click="removePokemon(pokemon)">
+                        <i class="material-icons">close</i>
+                    </span>
+                    <div class="image-wrapper">
+                        <img class="pokemon-image" :src="pokemon.image" alt="bulbasaur">
+                    </div>
+                    <div class="pokemon-title">
+                        {{ pokemon.name }}
+                    </div>
+                </div>
             </article>
         </main>
     </div>
-
-    <!-- Pokemon Card template for component -->
-    <script type="text/x-template" id="pokemon-card-template">
-        <div class="pokemon-card">
-            <div class="background-wrapper">
-                <div v-for="type in pokemon.types" :key="type" :style="{'background-color': typeColor[type]}"></div>
-            </div>
-            <span class="remove-pokemon" @click="remove"><i class="material-icons">close</i></span>
-            <div class="image-wrapper">
-                <img class="pokemon-image" :src="pokemon.image" alt="bulbasaur">
-            </div>
-            <div class="pokemon-title">
-                {{ pokemon.name }}
-            </div>
-        </div>
     </script>
 
     <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
